@@ -11,7 +11,7 @@ with hypergraph Laplacians, diffusion kernels, spectral CF-bounds, and KV-calibr
 
 ---
 ## Project map & theory cheat-sheet
-_Generated: 2025-10-07 11:17_
+_Generated: 2025-09-23 11:17_
 
 This section gives a quick map from code to the theoretical objects used in the paper (inline LaTeX uses \( ... \)). It also includes a depth-limited tree of the repo.
 
@@ -106,7 +106,7 @@ mllm-hallucination/
 
 ---
 ## File-type distribution
-_Generated: 2025-10-07 11:17_
+_Generated: 2025-09-23 11:17_
 
 | Extension | Count | Share |
 |---|---:|---:|
@@ -135,9 +135,9 @@ The surfaces below show how the multimodal hallucination energy evolves with tim
 
 The exact code/assets used at submission time are archived in the GitHub Release
 **“Submission (Sep-2025)”**. The default branch may contain replication
-notebooks and small fixes added after the deadline.
+notebooks and small fixes for future runs.
 
-> To audit the submission state, download the release tarball or see `RELEASE_NOTES_Submission_Sep2025.md`.
+> To audit the submission state, download the release tarball or see `RELEASE_NOTES_2025-09.md`.
 <!-- SUBMISSION_SNAPSHOT_END -->
 
 <!-- WHY_NUMBERS_DIFFER_START -->
