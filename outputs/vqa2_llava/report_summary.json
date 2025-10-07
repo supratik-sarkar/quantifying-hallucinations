@@ -1,0 +1,10 @@
+{
+  "dataset": "vqa2_llava",
+  "dir": "outputs/vqa2_llava",
+  "models": [
+    "clip_whisper_t5",
+    "blip_clip_whisper",
+    "siglip_whisper_t5"
+  ],
+  "n_samples": 500
+}

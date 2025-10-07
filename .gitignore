@@ -1,0 +1,24 @@
+﻿# Python / build
+__pycache__/
+*.pyc
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# Data & caches
+data/
+outputs/**/cache/
+outputs/**/tmp/
+hf_cache/
+*.tar
+*.tar.gz
+*.zip
+
+# Big artifacts not meant for versioning
+*.pt
+*.bin
+*.ckpt
+
+# OS cruft
+.DS_Store
+Thumbs.db

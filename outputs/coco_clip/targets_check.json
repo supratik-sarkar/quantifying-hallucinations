@@ -1,0 +1,152 @@
+{
+  "clip_whisper_t5": {
+    "Entropy": {
+      "AUROC": {
+        "val": 0.324,
+        "tgt": 0.81,
+        "status": "DRIFT"
+      },
+      "AUPRC": {
+        "val": 0.404,
+        "tgt": 0.79,
+        "status": "DRIFT"
+      }
+    },
+    "MaxProb": {
+      "AUROC": {
+        "val": 0.302,
+        "tgt": 0.82,
+        "status": "DRIFT"
+      },
+      "AUPRC": {
+        "val": 0.396,
+        "tgt": 0.81,
+        "status": "DRIFT"
+      }
+    },
+    "Margin": {
+      "AUROC": {
+        "val": 0.451,
+        "tgt": 0.83,
+        "status": "DRIFT"
+      },
+      "AUPRC": {
+        "val": 0.499,
+        "tgt": 0.82,
+        "status": "DRIFT"
+      }
+    },
+    "OURS": {
+      "AUROC": {
+        "val": 0.476,
+        "tgt": 0.86,
+        "status": "DRIFT"
+      },
+      "AUPRC": {
+        "val": 0.482,
+        "tgt": 0.84,
+        "status": "DRIFT"
+      }
+    }
+  },
+  "blip_clip_whisper": {
+    "Entropy": {
+      "AUROC": {
+        "val": 0.324,
+        "tgt": 0.81,
+        "status": "DRIFT"
+      },
+      "AUPRC": {
+        "val": 0.404,
+        "tgt": 0.79,
+        "status": "DRIFT"
+      }
+    },
+    "MaxProb": {
+      "AUROC": {
+        "val": 0.302,
+        "tgt": 0.82,
+        "status": "DRIFT"
+      },
+      "AUPRC": {
+        "val": 0.396,
+        "tgt": 0.81,
+        "status": "DRIFT"
+      }
+    },
+    "Margin": {
+      "AUROC": {
+        "val": 0.451,
+        "tgt": 0.83,
+        "status": "DRIFT"
+      },
+      "AUPRC": {
+        "val": 0.499,
+        "tgt": 0.82,
+        "status": "DRIFT"
+      }
+    },
+    "OURS": {
+      "AUROC": {
+        "val": 0.476,
+        "tgt": 0.86,
+        "status": "DRIFT"
+      },
+      "AUPRC": {
+        "val": 0.482,
+        "tgt": 0.84,
+        "status": "DRIFT"
+      }
+    }
+  },
+  "siglip_whisper_t5": {
+    "Entropy": {
+      "AUROC": {
+        "val": 0.377,
+        "tgt": 0.81,
+        "status": "DRIFT"
+      },
+      "AUPRC": {
+        "val": 0.429,
+        "tgt": 0.79,
+        "status": "DRIFT"
+      }
+    },
+    "MaxProb": {
+      "AUROC": {
+        "val": 0.307,
+        "tgt": 0.82,
+        "status": "DRIFT"
+      },
+      "AUPRC": {
+        "val": 0.396,
+        "tgt": 0.81,
+        "status": "DRIFT"
+      }
+    },
+    "Margin": {
+      "AUROC": {
+        "val": 0.433,
+        "tgt": 0.83,
+        "status": "DRIFT"
+      },
+      "AUPRC": {
+        "val": 0.464,
+        "tgt": 0.82,
+        "status": "DRIFT"
+      }
+    },
+    "OURS": {
+      "AUROC": {
+        "val": 0.391,
+        "tgt": 0.86,
+        "status": "DRIFT"
+      },
+      "AUPRC": {
+        "val": 0.455,
+        "tgt": 0.84,
+        "status": "DRIFT"
+      }
+    }
+  }
+}

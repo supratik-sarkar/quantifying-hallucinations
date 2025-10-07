@@ -1,0 +1,64 @@
+{
+  "dataset_tag": "audiocaps",
+  "n_samples": 500,
+  "models": {
+    "clip_whisper_t5": {
+      "metrics": {
+        "Entropy": {
+          "AUROC": 0.2986127778044449,
+          "AUPRC": 0.3927477404475229
+        },
+        "MaxProb": {
+          "AUROC": 0.2678602857645722,
+          "AUPRC": 0.36785311234050516
+        },
+        "Margin": {
+          "AUROC": 0.42920686730987695,
+          "AUPRC": 0.46357261581733505
+        },
+        "OURS": {
+          "AUROC": 0.5197043152690443,
+          "AUPRC": 0.5474395735214369,
+          "sel_key": "T0.7_h1.2_eps0.2"
+        }
+      },
+      "energies": {
+        "median": 2.23,
+        "lo": 2.23,
+        "hi": 2.23
+      },
+      "throughput": {
+        "ex_per_s": 517.3531398370542
+      }
+    },
+    "siglip_whisper_t5": {
+      "metrics": {
+        "Entropy": {
+          "AUROC": 0.44432710923374774,
+          "AUPRC": 0.47240439448528426
+        },
+        "MaxProb": {
+          "AUROC": 0.26448423174770797,
+          "AUPRC": 0.371522320533439
+        },
+        "Margin": {
+          "AUROC": 0.43256692107073713,
+          "AUPRC": 0.4611955130513921
+        },
+        "OURS": {
+          "AUROC": 0.5078001248019969,
+          "AUPRC": 0.5395504017444088,
+          "sel_key": "T0.7_h0.8_eps0.2"
+        }
+      },
+      "energies": {
+        "median": 2.0,
+        "lo": 2.0,
+        "hi": 2.0
+      },
+      "throughput": {
+        "ex_per_s": 566.4057931793697
+      }
+    }
+  }
+}

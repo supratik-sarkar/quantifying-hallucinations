@@ -1,0 +1,9 @@
+{
+  "dataset": "audiocaps",
+  "dir": "outputs/audiocaps",
+  "models": [
+    "clip_whisper_t5",
+    "siglip_whisper_t5"
+  ],
+  "n_samples": 500
+}

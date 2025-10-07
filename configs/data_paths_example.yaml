@@ -1,0 +1,4 @@
+dataset:
+  coco_dir: data/coco_captions
+  vqa2_dir: data/vqa2
+  audiocaps_dir: data/audiocaps

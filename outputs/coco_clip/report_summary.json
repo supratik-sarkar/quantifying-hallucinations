@@ -1,0 +1,10 @@
+{
+  "dataset": "coco_clip",
+  "dir": "outputs/coco_clip",
+  "models": [
+    "clip_whisper_t5",
+    "blip_clip_whisper",
+    "siglip_whisper_t5"
+  ],
+  "n_samples": 500
+}

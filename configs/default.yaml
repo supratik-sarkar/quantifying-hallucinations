@@ -1,0 +1,36 @@
+allow_synthetic: false   # set true only for dev runs (numbers will drift)
+seed: 1337
+device: cuda
+out_dir: outputs
+
+# detection/energy sweeps
+temperature_grid: [0.9, 1.0, 1.1, 1.25]
+tau_grid: [0.5, 1.0, 1.5]
+eps_grid: [0.01, 0.02, 0.05]
+h_grid: [0.5, 0.75, 1.0, 1.25]
+
+# knowledge graph
+K_topk: 32
+
+# laplacian blocks (centers)
+alpha_intra: 1.0
+beta_cross: 0.4
+gamma_joint: 0.25
+
+batch_size: 64
+num_workers: 2
+
+models:
+  - name: "clip_whisper_t5"
+    text_backbone: "google/flan-t5-small"
+    vision_backbone: "openai/clip-vit-base-patch32"
+    audio_backbone: "openai/whisper-small"
+  - name: "blip_clip_whisper"
+    text_backbone: "google/flan-t5-small"
+    vision_backbone: "openai/clip-vit-base-patch32"
+    caption_backbone: "Salesforce/blip-image-captioning-base"
+    audio_backbone: "openai/whisper-small"
+  - name: "siglip_whisper_t5"
+    text_backbone: "google/flan-t5-small"
+    vision_backbone: "google/siglip-base-patch16-256-multilingual"
+    audio_backbone: "openai/whisper-small"
