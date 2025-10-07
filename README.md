@@ -77,16 +77,17 @@ mllm-hallucination/
 
 | File | Quantity / Symbol | Short description |
 |---|---|---|
-| `src/theory/smoothing.py` | \(\tilde{f}_p = (1-\varepsilon) f_p + \varepsilon \rho\) | Mixture smoothing of densities with weight \( \varepsilon \). |
-| `src/theory/score_semantic.py` | \(d_{\mathrm{sem}}^{(\varepsilon,h)}(x)\) | Pointwise semantic gap using smoothed kernel density at bandwidth \(h\). |
-| `src/theory/k_selector.py` | \(\Pi_{\mathcal{K}}\) | Selector mapping a node to its representative in knowledge set \( \mathcal{K} \). |
-| `src/theory/hypergraph.py` | \(w_{T,t}(e)\) | Hyperedge weights parameterized by diffusion time \(t\) and temperature \(T\). |
-| `src/theory/laplacian.py` | \(\mathcal{L}_{\text{norm}}, \lambda_{2}\) | Normalized hypergraph Laplacian and spectral quantities. |
-| `src/theory/diffusion.py` | \(K_t = e^{-t\mathcal{L}}\) | Diffusion kernel and semantic diffusion operator. |
-| `src/theory/contrast.py` | \(c(u,v)\) | Contrast vector for a node pair used in energy gaps. |
-| `src/theory/energy.py` | \(\Delta \mathcal{E}_{\tau}\) | Spectral energy gap bounds over threshold \( \tau \). |
-| `src/theory/calibration.py` | \(\hat{m},\ k\!v(\tau)\) | Good–Turing missing mass and calibration schedule. |
-| `src/theory/kernel_smoother.py` | \(k_h(x,y),\ \mathbf{T}_h\) | Gaussian kernel at scale \(h\); row-stochastic transition \( \mathbf{T}_h \). |
+| `src/theory/smoothing.py` | $\tilde{f}_p = (1-\varepsilon) f_p + \varepsilon \rho$ | Mixture smoothing of densities with weight $\varepsilon$. |
+| `src/theory/score_semantic.py` | $d_{\mathrm{sem}}^{(\varepsilon,h)}(x)$ | Pointwise semantic gap using smoothed kernel density at bandwidth $h$. |
+| `src/theory/k_selector.py` | $\Pi_{\mathcal{K}}$ | Selector mapping a node to its representative in knowledge set $\mathcal{K}$. |
+| `src/theory/hypergraph.py` | $w_{T,t}(e)$ | Hyperedge weights parameterized by diffusion time $t$ and temperature $T$. |
+| `src/theory/laplacian.py` | $\mathcal{L}_{\text{norm}}, \lambda_{2}$ | Normalized hypergraph Laplacian and spectral quantities. |
+| `src/theory/diffusion.py` | $K_t = e^{-t\mathcal{L}}$ | Diffusion kernel and semantic diffusion operator. |
+| `src/theory/contrast.py` | $c(u,v)$ | Contrast vector for a node pair used in energy gaps. |
+| `src/theory/energy.py` | $\Delta \mathcal{E}_{\tau}$ | Spectral energy gap bounds over threshold. |
+| `src/theory/calibration.py` | $\hat{m},\ k\!v(\tau)$ | Good–Turing missing mass and calibration schedule. |
+| `src/theory/kernel_smoother.py` | $K_h(x,y),\ T_h$ | Gaussian kernel at scale $h$ (bandwidth); row-stochastic transition $T_h$. |
+
 
 ### Key modules (implementation map)
 
@@ -175,28 +176,7 @@ The script prints an averaged table and full per-dataset/model breakdown.
 ## Compute environments
 
 - **Primary (paper):** Databricks (A100) in an internal enterprise workspace.
-- **Replication:** For reproducibility we provide Colab/GCP notebooks and a CPU/GPU fallback pipeline.  
+- **Replication:** For reproducibility, we provide Colab/GCP notebooks and a CPU/GPU fallback pipeline.  
   Minor numeric differences across plots/tables may occur across hardware & library versions. 
   We include environment pins and seeds, plus targets vs. current diagnostics (```tools/check_targets.py```)
 <!-- COMPUTE_ENVS_END -->
-
-<!-- WHY_NUMBERS_DIFFER_START -->
-## Why numbers may differ
-
-Small AUROC/AUPRC deltas vs. the paper table are expected due to:
-- **Stochastic inference** (sampling, CUDA nondeterminism) even with fixed seeds.
-- **Library/driver drift** across machines A100 vs Colab T4/L4 (PyTorch/CUDA/cuDNN/FAISS kernels).
-- **Model snapshot drift** (HF model revisions or API-served models updated upstream).
-- **Dataset loaders** (shuffle order, minor preprocessing differences).
-
-**Mitigations:** version pinning, fixed seeds, frozen model revisions, and a
-drift audit script:
-```bash
-python tools/check_targets.py
-```
-For more determinism:
-```bash
-bash scripts/repro_seed.sh
-```
-Residual ±(1–3)pp variations are typical for this stack.
-<!-- WHY_NUMBERS_DIFFER_END -->
